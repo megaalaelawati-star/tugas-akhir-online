@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: white;
+}
+
+nav {
+    background-color: #ff771f;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    margin-right: auto;
+}
+
+.logo img {
+    width: 200px;
+    height: 40px;
+    margin: 5px 0 0 15px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 100px 0 40px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 40px;
+}
+
+nav ul li a:hover {
+    background-color: white;
+    color: #ff3d00;
+}
+
+.card {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 40px;
+    background-color: #f89e36e8;
+    border-radius: 20px;
+}
+
+.section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.section1 .box1 {
+    flex: 1 1 60%;
+    padding: 20px;
+}
+
+.section1 .box1 h1 {
+    font-size: 2rem;
+    margin: 15px 0;
+}
+
+.section1 .box1 p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.section1 .box1 a.button {
+    display: inline-block;
+    background: #ff771f;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section1 .box1 a.button:hover {
+    background: white;
+    color: #ff771f;
+    border: 2px solid #ff771f;
+}
+
+.section1 .box2 {
+    flex: 1 1 35%;
+    text-align: center;
+}
+
+.section1 .box2 img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 15px;
+}
+
+.section2 h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.section2 .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.section2 .box {
+    background-color: white;
+    border-radius: 20px;
+    height: 350px;
+    overflow: hidden;
+    text-align: center;
+    padding: 10px;
+}
+
+.section2 .box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+.kontak-singkat {
+    text-align: center;
+}
+
+.kontak-singkat h2 {
+    font-size: 1.6rem;
+    margin-bottom: 10px;
+}
+
+.kontak-singkat p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.kontak-singkat .info-singkat p {
+    margin: 5px 0;
+    font-size: 1rem;
+}
+
+.kontak-singkat a.button {
+    display: inline-block;
+    margin-top: 15px;
+    background: #ff771f;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.kontak-singkat a.button:hover {
+    background: white;
+    color: #ff771f;
+    border: 2px solid #ff771f;
+}
+
+footer {
+    background-color: #ff771f;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
