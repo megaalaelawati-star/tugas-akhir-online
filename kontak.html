@@ -1,16 +1,17 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontak</title>
+    <title>Kontak - Mega Laelawati</title>
     <link rel="stylesheet" href="kontak.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -23,7 +24,7 @@
             </div>
             <ul>
                 <li><a href="index.html">Beranda</a></li>
-                <li><a href="kontak.html">Kontak</a></li>
+                <li><a href="kontak.html" class="active">Kontak</a></li>
                 <li><a href="profil.html">Profil</a></li>
             </ul>
             <div class="clear"></div>
@@ -31,55 +32,117 @@
 
         <!-- Halaman Kontak Lengkap -->
         <section class="kontak card clearfix" id="kontak">
-            <h1>Hubungi Saya</h1>
-            <p>Silakan isi formulir di bawah atau hubungi saya melalui informasi kontak yang tersedia. Saya akan
+            <h1 class="section-title">Hubungi <span class="highlight">Saya</span></h1>
+            <p class="intro-text">Silakan isi formulir di bawah atau hubungi saya melalui informasi kontak yang
+                tersedia. Saya akan
                 dengan senang hati merespons pesan Anda secepat mungkin.</p>
 
-            <!-- Form Kontak -->
-            <form class="form-kontak">
-                <label for="nama">Nama</label>
-                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+            <div class="kontak-container">
+                <!-- Form Kontak -->
+                <div class="form-container">
+                    <form class="form-kontak">
+                        <div class="form-group">
+                            <label for="nama">Nama Lengkap</label>
+                            <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+                            <i class="fas fa-user"></i>
+                        </div>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                        <div class="form-group">
+                            <label for="email">Alamat Email</label>
+                            <input type="email" id="email" name="email" placeholder="Masukkan email Anda" required>
+                            <i class="fas fa-envelope"></i>
+                        </div>
 
-                <label for="subjek">Subjek</label>
-                <input type="text" id="subjek" name="subjek" placeholder="Masukkan subjek pesan">
+                        <div class="form-group">
+                            <label for="subjek">Subjek Pesan</label>
+                            <input type="text" id="subjek" name="subjek" placeholder="Masukkan subjek pesan">
+                            <i class="fas fa-tag"></i>
+                        </div>
 
-                <label for="pesan">Pesan</label>
-                <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda" rows="5" required></textarea>
+                        <div class="form-group">
+                            <label for="pesan">Pesan Anda</label>
+                            <textarea id="pesan" name="pesan" placeholder="Tulis pesan Anda di sini..." rows="5"
+                                required></textarea>
+                            <i class="fas fa-comment"></i>
+                        </div>
 
-                <button type="submit">Kirim Pesan</button>
-            </form>
+                        <button type="submit" class="submit-btn">
+                            <span>Kirim Pesan</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
 
-            <!-- Info Kontak -->
-            <div class="info-kontak">
-                <h3>Informasi Kontak</h3>
-                <p><strong>Email:</strong> megaalaelawati@gmail.com</p>
-                <p><strong>WhatsApp:</strong> +62 838-2161-2483</p>
-                <p><strong>Alamat:</strong> Bandung, Jawa Barat, Indonesia</p>
-            </div>
+                <!-- Info Kontak -->
+                <div class="info-container">
+                    <div class="info-kontak">
+                        <h3><i class="fas fa-address-card"></i> Informasi Kontak</h3>
+                        <div class="kontak-item">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="details">
+                                <h4>Email</h4>
+                                <p>megaalaelawati@gmail.com</p>
+                            </div>
+                        </div>
 
-            <!-- Sosial Media -->
-            <div class="sosmed">
-                <h3>Ikuti Saya</h3>
-                <a href="https://www.instagram.com/megalaelawati_">Instagram</a> |
-                <a href="https://www.linkedin.com/in/mega-laelawati-68b06936a">LinkedIn</a> |
-                <a href="https://www.facebook.com/mega.laelawati.9/">Facebook</a>
+                        <div class="kontak-item">
+                            <div class="icon">
+                                <i class="fab fa-whatsapp"></i>
+                            </div>
+                            <div class="details">
+                                <h4>WhatsApp</h4>
+                                <p>+62 838-2161-2483</p>
+                            </div>
+                        </div>
+
+                        <div class="kontak-item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="details">
+                                <h4>Alamat</h4>
+                                <p>Kab. Bandung Barat, Jawa Barat, Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sosial Media -->
+                    <div class="sosmed">
+                        <h3><i class="fas fa-share-alt"></i> Ikuti Saya</h3>
+                        <div class="link-sosmed">
+                            <a href="https://www.instagram.com/megalaelawati_" class="sosial-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/mega-laelawati-68b06936a" class="sosial-link">
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.facebook.com/mega.laelawati.9/" class="sosial-link">
+                                <i class="fab fa-facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <!-- Google Maps -->
             <div class="maps">
-                <h3>Lokasi Saya</h3>
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.973964448575!2d110.41474707499805!3d-7.809115792228201!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5793b44a5b11%3A0x301576d14feb720!2sBandung%2C%20Jawa%20Barat!5e0!3m2!1sid!2sid!4v1709897368432!5m2!1sid!2sid"
-                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <h3><i class="fas fa-map-marked-alt"></i> Lokasi Saya</h3>
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d990.4096856782309!2d107.63374706948423!3d-6.8137195679408045!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e0f01beb25a5%3A0xafab2c800daf2cd5!2sJl.%20Sukasenang%20Raya%20No.45%2C%20Cibogo%2C%20Kec.%20Lembang%2C%20Kabupaten%20Bandung%20Barat%2C%20Jawa%20Barat%2040391!5e0!3m2!1sid!2sid!4v1757322507119!5m2!1sid!2sid"
+                        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
             </div>
         </section>
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2025 Mega Laelawati. Dibuat dengan 🤍</p>
+            <p>&copy; 2025 Mega Laelawati. Dibuat dengan <span class="heart">🤍</span></p>
         </footer>
     </div>
 </body>

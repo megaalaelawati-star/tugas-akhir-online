@@ -4,22 +4,45 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: "Roboto", sans-serif;
-    background-color: white;
+:root {
+    --primary-color: #ff771f;
+    --secondary-color: #f89e36;
+    --accent-color: #ff3d00;
+    --light-color: #fff8f0;
+    --dark-color: #333;
+    --text-color: #444;
+    --form-bg: #ffffff;
 }
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(135deg, #fff8f0 0%, #fef5ed 100%);
+    color: var(--text-color);
+    line-height: 1.6;
+    font-weight: 400;
+}
+
 
 .container {
     width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
+/* Navbar Styles */
 nav {
-    background-color: #ff771f;
-    height: 50px;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    height: 70px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 30px;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .logo {
     margin-right: auto;
@@ -28,7 +51,11 @@ nav {
 .logo img {
     width: 200px;
     height: 40px;
-    margin: 5px 0 0 15px;
+    transition: transform 0.3s ease;
+}
+
+.logo img:hover {
+    transform: scale(1.05);
 }
 
 nav ul {
@@ -38,21 +65,23 @@ nav ul {
 }
 
 nav ul li {
-    margin: 0 40px;
+    margin: 0 20px;
 }
 
 nav ul li a {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    font-size: 18px;
-    padding: 5px 10px;
-    border-radius: 40px;
+    font-weight: 500;
+    font-size: 16px;
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
 }
 
-nav ul li a:hover {
-    background-color: white;
-    color: #ff3d00;
+nav ul li a:hover,
+nav ul li a.active {
+    background: white;
+    color: var(--accent-color);
 }
 
 .clearfix::after {
@@ -61,102 +90,376 @@ nav ul li a:hover {
     clear: both;
 }
 
+/* Card Styles */
 .card {
     width: 95%;
     max-width: 1200px;
-    margin: 20px auto;
+    margin: 30px auto;
     padding: 40px;
-    background-color: #f89e36e8;
+    background: linear-gradient(135deg, rgba(255, 119, 31, 0.1) 0%, rgba(248, 158, 54, 0.15) 100%);
     border-radius: 20px;
-    text-align: left;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Kontak Lengkap */
-.kontak h1 {
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+
+/* Section Title */
+.section-title {
+    font-size: 2.2rem;
     text-align: center;
     margin-bottom: 15px;
-    font-size: 1.8rem;
+    color: var(--dark-color);
+    position: relative;
+    display: inline-block;
+    width: 100%;
 }
 
-.kontak p {
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.highlight {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+
+.intro-text {
     text-align: center;
-    margin-bottom: 25px;
-    font-size: 1rem;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.kontak .konten-kontak {
+/* Kontak Container */
+.kontak-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr;
     gap: 40px;
-    align-items: start;
+    margin-bottom: 40px;
+}
+
+/* Form Styles */
+.form-container {
+    background: var(--form-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .form-kontak {
     display: grid;
-    gap: 12px;
+    gap: 20px;
 }
 
-.form-kontak label {
-    font-weight: bold;
-    margin-top: 8px;
+.form-group {
+    position: relative;
 }
 
-.form-kontak input,
-.form-kontak textarea {
-    padding: 10px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    font-size: 1rem;
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+}
+
+.form-group input,
+.form-group textarea {
     width: 100%;
+    padding: 15px 15px 15px 45px;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
 }
 
-.form-kontak button {
-    background-color: #ff771f;
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 119, 31, 0.2);
+}
+
+.form-group i {
+    position: absolute;
+    left: 15px;
+    top: 42px;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.form-group input:focus+i,
+.form-group textarea:focus+i {
+    color: var(--primary-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.submit-btn {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     color: white;
-    padding: 12px;
+    padding: 15px 25px;
     border: none;
-    border-radius: 8px;
-    font-weight: bold;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
     cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin-top: 10px;
+    box-shadow: 0 4px 15px rgba(255, 119, 31, 0.3);
 }
 
-.form-kontak button:hover {
-    background-color: white;
-    color: #ff771f;
-    border: 2px solid #ff771f;
+.submit-btn:hover {
+    background: white;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    box-shadow: 0 4px 15px rgba(255, 119, 31, 0.5);
+    transform: translateY(-3px);
+}
+
+
+/* Info Container */
+.info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .info-kontak,
-.sosmed,
-.maps {
-    display: grid;
-    gap: 10px;
-    margin-top: 20px;
-    text-align: center;
+.sosmed {
+    background: var(--form-bg);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
-.sosmed {
+.info-kontak h3,
+.sosmed h3 {
+    margin-bottom: 20px;
+    color: var(--dark-color);
     display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kontak-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    transition: background 0.3s ease;
+}
+
+.kontak-item:hover {
+    background: rgba(255, 119, 31, 0.05);
+}
+
+.kontak-item .icon {
+    width: 50px;
+    height: 50px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.kontak-item .details h4 {
+    color: var(--dark-color);
+    margin-bottom: 5px;
+}
+
+.kontak-item .details p {
+    color: var(--text-color);
+}
+
+/* Sosial Media */
+.link-sosmed {
+    display: flex;
+    flex-direction: column;
     gap: 15px;
 }
 
-.sosmed a {
+.sosial-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
     text-decoration: none;
+    color: var(--text-color);
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.sosial-link:hover {
+    background: rgba(255, 119, 31, 0.1);
+    color: var(--primary-color);
+    transform: translateX(5px);
+}
+
+.sosial-link i {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     color: white;
-    font-weight: bold;
-    transition: 0.3s;
+    font-size: 1.1rem;
 }
 
-.sosmed a:hover {
-    color: #ff3d00;
+/* Maps */
+.maps {
+    margin-top: 40px;
 }
 
+.maps h3 {
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.map-container {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Footer */
 footer {
-    background-color: #ff771f;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     color: white;
     text-align: center;
-    padding: 15px 0;
-    font-size: 0.9rem;
+    padding: 25px 0;
+    margin-top: 50px;
+}
+
+.heart {
+    color: #ff2e63;
+    animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+    0% {
+        transform: scale(1);
+    }
+
+    5% {
+        transform: scale(1.2);
+    }
+
+    10% {
+        transform: scale(1.1);
+    }
+
+    15% {
+        transform: scale(1.3);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .kontak-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .info-container {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        padding: 0 15px;
+        flex-direction: column;
+        height: auto;
+        padding: 15px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .card {
+        padding: 25px;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .info-container {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 160px;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .form-container,
+    .info-kontak,
+    .sosmed {
+        padding: 20px;
+    }
+
+    .kontak-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sosial-link {
+        justify-content: center;
+    }
 }

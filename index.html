@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beranda</title>
+    <title>Mega Laelawati - Portfolio</title>
     <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Oleo+Script:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                 <img src="Foto/logo.png" alt="logo">
             </div>
             <ul>
-                <li><a href="index.html">Beranda</a></li>
+                <li><a href="index.html" class="active">Beranda</a></li>
                 <li><a href="kontak.html">Kontak</a></li>
                 <li><a href="profil.html">Profil</a></li>
             </ul>
@@ -32,65 +32,112 @@
         <!-- Box Perkenalan -->
         <section class="section1 card clearfix">
             <div class="box1">
-                <h1>Halo! Saya Mega Laelawati</h1>
+                <h1>Halo! Saya <span class="highlight">Mega Laelawati</span></h1>
                 <p>
-                    Saya lulusan Universitas Komputer Indonesia, jurusan Teknik Informatika.
-                    Saya tertarik pada bidang pengembangan web dan dokumentasi proses bisnis, dengan kemampuan analisis
+                    Lulusan <span class="text-accent">Universitas Komputer Indonesia</span>, jurusan Teknik Informatika
+                    yang tertarik pada bidang pengembangan web dan dokumentasi proses bisnis. Saya memiliki kemampuan
+                    analisis
                     dan pemecahan masalah untuk menyederhanakan alur kerja serta menciptakan solusi yang efisien.
-                    <br>
-                    <br>
-                    Pengalaman magang di Dinas Komunikasi dan Informatika Kota Bandung memberi saya kesempatan
-                    berkolaborasi dalam pengembangan sistem baru dan membuat dokumentasi proses bisnis.
+                </p>
+                <p>
+                    Pengalaman magang di <span class="text-accent">Dinas Komunikasi dan Informatika Kota Bandung</span>
+                    memberi saya kesempatan berkolaborasi dalam pengembangan sistem baru dan membuat dokumentasi proses
+                    bisnis.
                     Saya siap berkontribusi dengan keterampilan teknis, analitis, dan semangat belajar di dunia
                     teknologi.
                 </p>
-                <a href="profil.html" class="button">Kenali Saya Lebih Jauh!</a>
+                <div class="button-group">
+                    <a href="profil.html" class="button primary-btn">Kenali Saya Lebih Jauh!</a>
+                </div>
             </div>
             <div class="box2">
-                <img src="Foto/Mega.jpg" alt="Mega">
+                <div class="image-container">
+                    <img src="Foto/Mega.jpg" alt="Mega">
+                    <div class="image-border"></div>
+                </div>
             </div>
         </section>
 
         <!-- Box Gambar -->
         <section class="section2 card clearfix">
-            <h1>Galeri</h1>
+            <h1 class="section-title">Galeri <span class="highlight">Kenangan</span></h1>
             <div class="box-container">
-                <div class="box box1">
-                    <img src="Foto/keluarga.jpg" alt="Keluarga">
+                <div class="box">
+                    <div class="image-wrapper">
+                        <img src="Foto/keluarga.jpg" alt="Keluarga">
+                        <div class="image-overlay">
+                            <h3>Keluarga</h3>
+                            <p>Sumber kekuatan dan dukungan</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="box box2">
-                    <img src="Foto/pasangan.jpg" alt="Pasangan">
+                <div class="box">
+                    <div class="image-wrapper">
+                        <img src="Foto/pasangan.jpg" alt="Pasangan">
+                        <div class="image-overlay">
+                            <h3>Pasangan</h3>
+                            <p>Pendamping dalam setiap langkah</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="box box3">
-                    <img src="Foto/teman.jpg" alt="Teman">
+                <div class="box">
+                    <div class="image-wrapper">
+                        <img src="Foto/teman.jpg" alt="Teman">
+                        <div class="image-overlay">
+                            <h3>Teman</h3>
+                            <p>Kolaborasi dan kebersamaan</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="box box4">
-                    <img src="Foto/organisasi.jpg" alt="Organisasi">
+                <div class="box">
+                    <div class="image-wrapper">
+                        <img src="Foto/organisasi.jpg" alt="Organisasi">
+                        <div class="image-overlay">
+                            <h3>Organisasi</h3>
+                            <p>Pengembangan diri dan kepemimpinan</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Kontak Singkat -->
-        <section class="kontak-singkat card clearfix">
-            <h2>Kontak Saya</h2>
-            <p>Ingin bekerja sama atau punya pertanyaan? Silakan hubungi saya melalui email atau klik tombol di bawah
+        <section id="kontak" class="kontak-singkat card clearfix">
+            <h2 class="section-title">Kontak <span class="highlight">Saya</span></h2>
+            <p class="kontak-desc">Ingin bekerja sama atau punya pertanyaan? Silakan hubungi saya melalui email atau
+                klik tombol di bawah
                 untuk informasi lebih lengkap.</p>
 
             <div class="info-singkat">
-                <p><strong>Email:</strong> megaalaelawati@gmail.com</p>
-                <p><strong>WhatsApp:</strong> +62 838-2161-2483</p>
+                <div class="kontak-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>megaalaelawati@gmail.com</p>
+                </div>
+                <div class="kontak-item">
+                    <i class="fab fa-whatsapp"></i>
+                    <p>+62 838-2161-2483</p>
+                </div>
             </div>
 
-            <a href="kontak.html" class="button">Lihat Detail Kontak</a>
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/mega-laelawati-68b06936a" class="social-icon"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://www.instagram.com/megalaelawati_" class="social-icon"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://github.com/megaalaelawati-star" class="social-icon"><i class="fab fa-github"></i></a>
+            </div>
+
+            <a href="kontak.html" class="button primary-btn">Lihat Detail Kontak</a>
         </section>
 
         <!-- Footer -->
         <footer>
-            <p>&copy; 2025 Mega Laelawati. Dibuat dengan 🤍</p>
+            <div class="footer-content">
+                <p>&copy; 2025 Mega Laelawati. Dibuat dengan <span class="heart">🤍</span></p>
+            </div>
         </footer>
 
     </div>
-
 
 </body>
 
